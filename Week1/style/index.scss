@@ -1,0 +1,116 @@
+@import "general/general";
+@import "general/header";
+@import "general/footer";
+@import "general/form";
+
+//categories
+.category {
+  //category title
+  .category__title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    padding: 100px 0 50px 0;
+  }
+
+  //category card
+  .category__row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+    .category__item {
+      flex: 1 1 auto;
+      position: relative;
+      padding: 0 0 35% 0;
+      margin: 0 5px;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+      span {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .category__item {
+        padding: 0 0 50% 0;
+      }
+      .category__item_4 {
+        display: none;
+      }
+    }
+    @media (max-width: 500px) {
+      .category__item {
+        padding: 0 0 75% 0;
+      }
+      .category__item_3 {
+        display: none;
+      }
+    }
+
+    .category__label {
+      width: 100%;
+      padding: 9px 0;
+      color: white;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      @include adaptive-font(20, 15);
+      line-height: 23px;
+      text-align: center;
+      background-color: rgba(224, 190, 162, 0.75);
+    }
+  }
+}
+
+//subscribe
+.subscribe {
+  padding: 100px 0 0 0;
+  margin: 0 auto;
+  max-width: 750px;
+
+  .subscribe__title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .subscribe__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscribe__input {
+    width: 90%;
+    padding: 16px 25%;
+  }
+  .subscribe__submit {
+    width: 90%;
+    margin: 16px 0;
+    padding: 16px 25%;
+  }
+
+  .subscribe__subtitle {
+    width: 80%;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+  }
+}

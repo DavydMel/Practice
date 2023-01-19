@@ -1,0 +1,29 @@
+$color: #252525;
+//path
+.path {
+  padding: 40px 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+
+  .path__row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .path__arrow {
+      padding: 0 11px;
+    }
+
+    .path__link {
+      text-decoration: none;
+      color: $color;
+
+      a {
+        text-decoration: none;
+        color: $color;
+      }
+    }
+  }
+}
