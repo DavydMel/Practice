@@ -3,6 +3,8 @@
 @import "general/footer";
 @import "general/form";
 
+@include headerBGColor(#3D3D3D, white);
+
 //categories
 .category {
   //category title

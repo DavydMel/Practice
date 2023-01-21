@@ -1,7 +1,7 @@
 $color: #252525;
 //path
 .path {
-  padding: 40px 0;
+  padding: 130px 0 40px 0;
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
@@ -25,5 +25,10 @@ $color: #252525;
         color: $color;
       }
     }
+  }
+}
+@media (max-width: 768px) {
+  .path {
+    padding: 70px 0 40px 0;
   }
 }

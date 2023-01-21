@@ -9,10 +9,6 @@ $color: #252525;
 @include headerTextColor($color);
 .header {
   height: auto;
-
-  .header__nav {
-    position: static;
-  }
 }
 
 //body (aside and catalog)
