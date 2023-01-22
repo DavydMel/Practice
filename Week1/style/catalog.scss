@@ -4,6 +4,7 @@
 @import "general/footer";
 @import "general/itemsCard";
 @import "general/path";
+@import "general/dropdown";
 
 $color: #252525;
 @include headerTextColor($color);

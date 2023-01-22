@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/catalog.css">
     <script src="scripts/footer.js" defer></script>
     <script src="scripts/header.js" defer></script>
+    <script src="scripts/dropdown.js" defer></script>
 </head>
 <body>
 <div class="wrapper">
@@ -284,36 +285,54 @@
                             </div>
                         </div>
                         <div class="catalog__filters">
-                            <div class="catalog__filter">
-                                <select>
-                                    <option selected>Размер</option>
-                                    <option>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                </select>
+                            <div class="catalog__filter dropdown">
+                                <div class="dropdown__select">
+                                    <div class="dropdown__selected">Размер</div>
+                                    <div class="dropdown__caret"></div>
+                                </div>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__active">Размер</li>
+                                    <li>XXS</li>
+                                    <li>XS</li>
+                                    <li>S</li>
+                                    <li>M</li>
+                                    <li>L</li>
+                                </ul>
                             </div>
-                            <div class="catalog__filter">
-                                <select>
-                                    <option selected>Цвет</option>
-                                    <option>White</option>
-                                    <option>Light Blue</option>
-                                    <option>Cream</option>
-                                </select>
+                            <div class="catalog__filter dropdown">
+                                <div class="dropdown__select">
+                                    <div class="dropdown__selected">Цвет</div>
+                                    <div class="dropdown__caret"></div>
+                                </div>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__active">Цвет</li>
+                                    <li>White</li>
+                                    <li>Light Blue</li>
+                                    <li>Cream</li>
+                                </ul>
                             </div>
-                            <div class="catalog__filter">
-                                <select>
-                                    <option selected>Цена</option>
-                                    <option>From smallest</option>
-                                    <option>From biggest</option>
-                                </select>
+                            <div class="catalog__filter dropdown">
+                                <div class="dropdown__select">
+                                    <div class="dropdown__selected">Цена</div>
+                                    <div class="dropdown__caret"></div>
+                                </div>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__active">Цена</li>
+                                    <li>From smallest</li>
+                                    <li>From biggest</li>
+                                </ul>
                             </div>
-                            <div class="catalog__filter">
-                                <select>
-                                    <option selected>Сортировать по</option>
-                                    <option>Sales</option>
-                                    <option>Popularity</option>
-                                    <option>Fashion</option>
-                                </select>
+                            <div class="catalog__filter dropdown">
+                                <div class="dropdown__select">
+                                    <div class="dropdown__selected">Сортировать по</div>
+                                    <div class="dropdown__caret"></div>
+                                </div>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__active">Сортировать по</li>
+                                    <li>Sales</li>
+                                    <li>Popularity</li>
+                                    <li>Fashion</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="items">

@@ -359,9 +359,6 @@ body.lock {
 @media (max-width: 768px) {
   .header {
     .header__imgs {
-      .header__img {
-      }
-
       .header__img_2 {
         display: none;
       }
@@ -375,14 +372,6 @@ body.lock {
       }
 
       .header__row {
-        .header__item {
-          .header__link {
-          }
-
-          .header__link_active {
-          }
-        }
-
         .header__text_1 {
           padding: 0 5px;
           margin: 0;
@@ -390,9 +379,6 @@ body.lock {
           img, svg {
             margin: 0;
           }
-        }
-
-        .header__show {
         }
 
         .header__hide {
