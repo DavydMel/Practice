@@ -43,13 +43,16 @@
                                                     <input type="text" placeholder="Введите ваш запрос">
                                                 </form>
                                             </div>
-                                            <div class="header__currency">
-                                                UAH
-                                                <svg class="svg_2" width="11" height="7" viewBox="0 0 11 7" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M5.01855 3.88906L8.90762 -4.85606e-08L10.0186 1.11094L5.01855 6.11093L0.0185546 1.11094L1.12949 -3.88553e-07L5.01855 3.88906Z"
-                                                          fill="white"/>
-                                                </svg>
+                                            <div class="header__drops">
+                                                <div class="dropdown__row">
+                                                    <div class="dropdown black">
+                                                        <ul class="dropdown__list">
+                                                            <li class="dropdown__active">RU</li>
+                                                            <li>UA</li>
+                                                            <li>EN</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -94,13 +97,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="header__item header__text_1 header__show icon">
-                            RU
-                            <svg class="svg_2" width="11" height="7" viewBox="0 0 11 7" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.01855 3.88906L8.90762 -4.85606e-08L10.0186 1.11094L5.01855 6.11093L0.0185546 1.11094L1.12949 -3.88553e-07L5.01855 3.88906Z"
-                                      fill="white"/>
-                            </svg>
+                        <div class="header__item header__drops header__text_1 header__show icon">
+                            <div class="dropdown__row">
+                                <div class="dropdown black">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__active">RU</li>
+                                        <li>UA</li>
+                                        <li>EN</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="header__item header__row header__hide">
@@ -132,21 +138,23 @@
                     </div>
                     <div class="header__item header__hide">
                         <div class="header__row">
-                            <div class="header__item header__text_1 icon">
-                                RU
-                                <svg class="svg_2" width="11" height="7" viewBox="0 0 11 7" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.01855 3.88906L8.90762 -4.85606e-08L10.0186 1.11094L5.01855 6.11093L0.0185546 1.11094L1.12949 -3.88553e-07L5.01855 3.88906Z"
-                                          fill="white"/>
-                                </svg>
-                            </div>
-                            <div class="header__item header__text_1 icon">
-                                UAH
-                                <svg class="svg_2" width="11" height="7" viewBox="0 0 11 7" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.01855 3.88906L8.90762 -4.85606e-08L10.0186 1.11094L5.01855 6.11093L0.0185546 1.11094L1.12949 -3.88553e-07L5.01855 3.88906Z"
-                                          fill="white"/>
-                                </svg>
+                            <div class="header__item header__drops header__text_1 icon">
+                                <div class="dropdown__row">
+                                    <div class="dropdown black">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__active">RU</li>
+                                            <li>UA</li>
+                                            <li>EN</li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown black">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__active">UAH</li>
+                                            <li>USD</li>
+                                            <li>EUR</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -285,54 +293,41 @@
                             </div>
                         </div>
                         <div class="catalog__filters">
-                            <div class="catalog__filter dropdown">
-                                <div class="dropdown__select">
-                                    <div class="dropdown__selected">Размер</div>
-                                    <div class="dropdown__caret"></div>
+                            <div class="dropdown__row">
+                                <div class="dropdown">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__active">Размер</li>
+                                        <li>XXS</li>
+                                        <li>XS</li>
+                                        <li>S</li>
+                                        <li>M</li>
+                                        <li>L</li>
+                                    </ul>
                                 </div>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__active">Размер</li>
-                                    <li>XXS</li>
-                                    <li>XS</li>
-                                    <li>S</li>
-                                    <li>M</li>
-                                    <li>L</li>
-                                </ul>
-                            </div>
-                            <div class="catalog__filter dropdown">
-                                <div class="dropdown__select">
-                                    <div class="dropdown__selected">Цвет</div>
-                                    <div class="dropdown__caret"></div>
+                                <div class="dropdown">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__active">Цвет</li>
+                                        <li>White</li>
+                                        <li>Blue</li>
+                                        <li>Cream</li>
+                                    </ul>
                                 </div>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__active">Цвет</li>
-                                    <li>White</li>
-                                    <li>Light Blue</li>
-                                    <li>Cream</li>
-                                </ul>
-                            </div>
-                            <div class="catalog__filter dropdown">
-                                <div class="dropdown__select">
-                                    <div class="dropdown__selected">Цена</div>
-                                    <div class="dropdown__caret"></div>
+                                <div class="dropdown">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__active">Цена</li>
+                                        <li>From smallest</li>
+                                        <li>From biggest</li>
+                                    </ul>
                                 </div>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__active">Цена</li>
-                                    <li>From smallest</li>
-                                    <li>From biggest</li>
-                                </ul>
-                            </div>
-                            <div class="catalog__filter dropdown">
-                                <div class="dropdown__select">
-                                    <div class="dropdown__selected">Сортировать по</div>
-                                    <div class="dropdown__caret"></div>
+                                <div class="dropdown">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__active">Сортировать по</li>
+                                        <li>Popularity</li>
+                                        <li>Sales</li>
+                                        <li>Fashion</li>
+                                        <li>New</li>
+                                    </ul>
                                 </div>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__active">Сортировать по</li>
-                                    <li>Sales</li>
-                                    <li>Popularity</li>
-                                    <li>Fashion</li>
-                                </ul>
                             </div>
                         </div>
                         <div class="items">

@@ -4,15 +4,12 @@
 @import "general/footer";
 @import "general/itemsCard";
 @import "general/path";
+@import "general/dropdown";
 
 $color: #252525;
 @include headerTextColor($color);
 .header {
   height: auto;
-
-  .header__nav {
-    position: static;
-  }
 }
 
 %title {

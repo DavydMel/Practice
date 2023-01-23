@@ -64,7 +64,7 @@ body.lock {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     transition: all 0.3s ease 0s;
 
     &.header__nav_colored {
@@ -109,6 +109,30 @@ body.lock {
       .header__show {
         display: none;
         padding-left: 20px;
+      }
+    }
+
+    .header__drops {
+      position: relative;
+      width: 100px;
+      height: 40px;
+
+      .dropdown {
+        margin: 0;
+
+        .dropdown__list {
+          padding-top: 0;
+          padding-bottom: 0;
+
+          .dropdown__active {
+            padding-left: 0;
+            padding-right: 25px;
+
+            &:after {
+              top: 10px;
+            }
+          }
+        }
       }
     }
   }
@@ -217,7 +241,7 @@ body.lock {
     left: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: white;
     z-index: 3;
     overflow: auto;
@@ -229,13 +253,7 @@ body.lock {
       font-size: 16px;
       line-height: 19px;
 
-      height: 100%;
       width: 100%;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
 
       li {
         width: 100%;
@@ -245,6 +263,17 @@ body.lock {
         a {
           text-decoration: none;
           color: #252525;
+        }
+      }
+      .header__drops {
+        margin-right: 10px;
+        .dropdown {
+          margin: 0;
+          color: #252525;
+        }
+        li {
+          padding: 5px 25px 5px 0;
+          border: none;
         }
       }
 
@@ -265,13 +294,6 @@ body.lock {
           font-weight: 300;
           font-size: 16px;
           line-height: 19px;
-        }
-      }
-
-      .header__currency {
-        color: #252525;
-        svg {
-          fill: #252525;
         }
       }
 
@@ -371,9 +393,17 @@ body.lock {
         background-color: #f7f7f7;
       }
 
+      .header__drops {
+        width: 50px;
+
+        .dropdown {
+          margin-left: 10px;
+        }
+      }
+
       .header__row {
         .header__text_1 {
-          padding: 0 5px;
+          padding: 0 12px;
           margin: 0;
 
           img, svg {

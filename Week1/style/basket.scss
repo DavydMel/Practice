@@ -5,15 +5,12 @@
 @import "general/itemsCard";
 @import "general/path";
 @import "general/form";
+@import "general/dropdown";
 
 $color: #252525;
 @include headerTextColor($color);
 .header {
   height: auto;
-
-  .header__nav {
-    position: static;
-  }
 }
 
 %title {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/index.css">
     <script src="scripts/footer.js" defer></script>
     <script src="scripts/header.js" defer></script>
+    <script src="scripts/dropdown.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -66,13 +67,16 @@
                                                         <input type="text" placeholder="Введите ваш запрос">
                                                     </form>
                                                 </div>
-                                                <div class="header__currency">
-                                                    UAH
-                                                    <svg class="svg_2" width="11" height="7" viewBox="0 0 11 7" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M5.01855 3.88906L8.90762 -4.85606e-08L10.0186 1.11094L5.01855 6.11093L0.0185546 1.11094L1.12949 -3.88553e-07L5.01855 3.88906Z"
-                                                              fill="white"/>
-                                                    </svg>
+                                                <div class="header__drops">
+                                                    <div class="dropdown__row">
+                                                        <div class="dropdown black">
+                                                            <ul class="dropdown__list">
+                                                                <li class="dropdown__active">RU</li>
+                                                                <li>UA</li>
+                                                                <li>EN</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </li>
@@ -90,7 +94,7 @@
                                             <a href="">NEW</a>
                                         </li>
                                         <li>
-                                            <a href="">КАТАЛОГ</a>
+                                            <a href="catalog.html">КАТАЛОГ</a>
                                         </li>
                                         <li>
                                             <a href="">О НАС</a>
@@ -117,13 +121,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="header__item header__text_1 header__show icon">
-                                RU
-                                <svg class="svg_2" width="11" height="7" viewBox="0 0 11 7" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.01855 3.88906L8.90762 -4.85606e-08L10.0186 1.11094L5.01855 6.11093L0.0185546 1.11094L1.12949 -3.88553e-07L5.01855 3.88906Z"
-                                          fill="white"/>
-                                </svg>
+                            <div class="header__item header__drops header__text_1 header__show icon">
+                                <div class="dropdown__row">
+                                    <div class="dropdown white">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__active">RU</li>
+                                            <li>UA</li>
+                                            <li>EN</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="header__item header__row header__hide">
@@ -148,17 +155,23 @@
                         </div>
                         <div class="header__item header__hide">
                             <div class="header__row">
-                                <div class="header__item header__text_1 icon">
-                                    RU
-                                    <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.01855 3.88906L8.90762 -4.85606e-08L10.0186 1.11094L5.01855 6.11093L0.0185546 1.11094L1.12949 -3.88553e-07L5.01855 3.88906Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div class="header__item header__text_1 icon">
-                                    UAH
-                                    <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.01855 3.88906L8.90762 -4.85606e-08L10.0186 1.11094L5.01855 6.11093L0.0185546 1.11094L1.12949 -3.88553e-07L5.01855 3.88906Z" fill="white"/>
-                                    </svg>
+                                <div class="header__item header__drops header__text_1 icon">
+                                    <div class="dropdown__row">
+                                        <div class="dropdown white">
+                                            <ul class="dropdown__list">
+                                                <li class="dropdown__active">RU</li>
+                                                <li>UA</li>
+                                                <li>EN</li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown white">
+                                            <ul class="dropdown__list">
+                                                <li class="dropdown__active">UAH</li>
+                                                <li>USD</li>
+                                                <li>EUR</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
