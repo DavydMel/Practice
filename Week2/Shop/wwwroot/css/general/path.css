@@ -1,0 +1,29 @@
+﻿.path {
+  padding: 130px 0 40px 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}
+.path .path__row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.path .path__row .path__arrow {
+  padding: 0 11px;
+}
+.path .path__row .path__link {
+  text-decoration: none;
+  color: #252525;
+}
+.path .path__row .path__link a {
+  text-decoration: none;
+  color: #252525;
+}
+
+@media (max-width: 768px) {
+  .path {
+    padding: 70px 0 40px 0;
+  }
+}

@@ -1,0 +1,86 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/general/dropdown.css",
+    "inputFile": "wwwroot/css/general/dropdown.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/general/footer.css",
+    "inputFile": "wwwroot/css/general/footer.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/general/form.css",
+    "inputFile": "wwwroot/css/general/form.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/general/general.css",
+    "inputFile": "wwwroot/css/general/general.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/general/header.css",
+    "inputFile": "wwwroot/css/general/header.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/general/itemsCard.css",
+    "inputFile": "wwwroot/css/general/itemsCard.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/general/path.css",
+    "inputFile": "wwwroot/css/general/path.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/general/svg.css",
+    "inputFile": "wwwroot/css/general/svg.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/basket.css",
+    "inputFile": "wwwroot/css/basket.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/catalog.css",
+    "inputFile": "wwwroot/css/catalog.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/index.css",
+    "inputFile": "wwwroot/css/index.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/item.css",
+    "inputFile": "wwwroot/css/item.scss",
+    "minify": {
+      "enabled": false
+    }
+  }
+]
