@@ -4,11 +4,16 @@
 
 @section css {
     <link rel="stylesheet" href="~/css/index.css">
+
+    <!--slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 }
 @section scripts {
     <script src="~/js/footer.js" defer></script>
     <script src="~/js/header.js" defer></script>
     <script src="~/js/dropdown.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <script src="~/js/slider.js" defer></script>
 }
 
 <header class="header">
@@ -207,23 +212,60 @@
     <div class="category">
         <div class="container">
             <div class="category__title">Категории</div>
-            <div class="category__row">
-                <a href="" class="category__item">
-                    <img src="~/img/category1.jpg" alt="">
-                    <span class="category__label">Куртки</span>
-                </a>
-                <a href="" class="category__item">
-                    <img src="~/img/category2.jpg" alt="">
-                    <span class="category__label">Пальто</span>
-                </a>
-                <a href="" class="category__item category__item_3">
-                    <img src="~/img/category3.jpg" alt="">
-                    <span class="category__label">Шубы</span>
-                </a>
-                <a href="" class="category__item category__item_4">
-                    <img src="~/img/category4.jpg" alt="">
-                    <span class="category__label">Парки</span>
-                </a>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <a href="" class="category__item swiper-slide">
+                        <img src="~/img/category1.jpg" alt="">
+                        <span class="category__label">Куртки</span>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="~/img/category2.jpg" alt="">
+                        <span class="category__label">Пальто</span>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="~/img/category3.jpg" alt="">
+                        <span class="category__label">Шубы</span>
+                    </a>
+                    <a href="" class="category__item category__item_4 swiper-slide">
+                        <img src="~/img/category4.jpg" alt="">
+                        <span class="category__label">Парки</span>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="~/img/category1.jpg" alt="">
+                        <span class="category__label">Куртки</span>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="~/img/category2.jpg" alt="">
+                        <span class="category__label">Пальто</span>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="~/img/category3.jpg" alt="">
+                        <span class="category__label">Шубы</span>
+                    </a>
+                    <a href="" class="category__item category__item_4 swiper-slide">
+                        <img src="~/img/category4.jpg" alt="">
+                        <span class="category__label">Парки</span>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="~/img/category1.jpg" alt="">
+                        <span class="category__label">Куртки</span>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="~/img/category2.jpg" alt="">
+                        <span class="category__label">Пальто</span>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="~/img/category3.jpg" alt="">
+                        <span class="category__label">Шубы</span>
+                    </a>
+                    <a href="" class="category__item category__item_4 swiper-slide">
+                        <img src="~/img/category4.jpg" alt="">
+                        <span class="category__label">Парки</span>
+                    </a>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="category__btn swiper-button-prev"></div>
+                <div class="category__btn swiper-button-next"></div>
             </div>
         </div>
     </div>
