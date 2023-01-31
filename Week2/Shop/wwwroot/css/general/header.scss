@@ -345,7 +345,8 @@ body.lock {
     .header__title {
       font-style: normal;
       font-weight: 300;
-      font-size: 46px;
+      //font-size: 46px;
+      @include adaptive-font(46, 35);
       line-height: 54px;
     }
 
@@ -421,18 +422,6 @@ body.lock {
         }
       }
     }
-
-    .header__text {
-      .header__subtitle {
-        img, svg {
-          margin: 0;
-        }
-      }
-    }
-
-    .logo {
-      width: 100px;
-    }
   }
 }
 
@@ -442,6 +431,17 @@ body.lock {
       .header__img_3 {
         display: none;
       }
+    }
+
+    .header__text {
+        .header__title:after {
+            top: 60px;
+            width: 60%;
+        }
+    }
+
+    .header__logo {
+      width: 100px;
     }
   }
 }

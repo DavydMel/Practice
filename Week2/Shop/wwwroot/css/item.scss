@@ -162,6 +162,7 @@ $color: #252525;
       }
       .current__fav {
         width: 48%;
+        @include adaptive-font(16, 14);
 
         border: 1px solid #252525;
         a {
