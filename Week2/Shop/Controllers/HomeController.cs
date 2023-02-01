@@ -1,25 +1,45 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shop.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Shop.Data;
 
 namespace Shop.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly StoreDbContext storeDbContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(StoreDbContext storeDbContext)
         {
-            _logger = logger;
+            this.storeDbContext = storeDbContext;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            ClaimsPrincipal claimUser = HttpContext.User;
+            var user = storeDbContext.User.FirstOrDefault(user => user.Email == claimUser.FindFirstValue(ClaimTypes.Email));
+
+            if (user != null) {
+                ViewBag.isAdmin = user.Access > 0;
+            }
+            else
+            {
+                ViewBag.isAdmin = false;
+            }
+
+            ViewData["isLogged"] = claimUser.Identity.IsAuthenticated;
             return View();
         }
 
-        public IActionResult Basket()
+        public async Task<IActionResult> Basket()
         {
+            ClaimsPrincipal claimUser = HttpContext.User;
+
+            ViewData["isLogged"] = claimUser.Identity.IsAuthenticated;
             return View();
         }
 
