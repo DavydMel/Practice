@@ -22,7 +22,6 @@ namespace Shop.Controllers
         {
             ClaimsPrincipal claimUser = HttpContext.User;
             var user = storeDbContext.User.FirstOrDefault(user => user.Email == claimUser.FindFirstValue(ClaimTypes.Email));
-
             if (user != null) {
                 ViewBag.isAdmin = user.Access > 0;
             }
@@ -30,7 +29,6 @@ namespace Shop.Controllers
             {
                 ViewBag.isAdmin = false;
             }
-
             ViewData["isLogged"] = claimUser.Identity.IsAuthenticated;
             return View();
         }

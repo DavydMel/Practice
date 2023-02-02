@@ -11,5 +11,7 @@ namespace Shop.Data
         public StoreDbContext(DbContextOptions options) : base(options)
         {
         }
+
+        public DbSet<Shop.Models.Store.Product> Product { get; set; }
     }
 }

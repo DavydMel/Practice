@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Shop.Models.Store.Product
+
+@{
     ViewData["Title"] = "Товар";
 }
 
@@ -69,19 +71,19 @@
                         </div>
                     </div>
                     <div class="current__mainImg">
-                        <img src="~/img/preview1.jpg" alt="">
+                        <img src="~/img/product/@Model.ImgName" alt="">
                     </div>
                 </div>
                 <div class="current__body">
-                    <div class="current__title">Кремовое пальто</div>
-                    <div class="current__price">3150 грн</div>
+                    <div class="current__title">@Model.Name</div>
+                    <div class="current__price">@Model.Price грн</div>
                     <div class="current__colors">
                         <div class="current__figures">
                             <div class="color color_1 color_big"></div>
                             <div class="color color_2 color_big"></div>
                             <div class="color color_3 color_big color_active"></div>
                         </div>
-                        <div class="current__colorName">Цвет: Кофе с молоком меланж</div>
+                        <div class="current__colorName">Цвет: @Model.Color</div>
                     </div>
                     <div class="current__size">
                         <select>
@@ -124,15 +126,7 @@
                                 </svg>
                             </div>
                             <div class="current__info">
-                                <p>Состав: 50% Шерсть, 50% Полиэстер</p>
-                                <p>Подкладка: 100% Полиэстер</p>
-                                <p>Утеплитель: 90% Пух, 10% Перо</p>
-                                <br />
-                                <p>- Не стирать</p>
-                                <p>- Гладить при температуре утюга до 110°C</p>
-                                <p>- Не отбеливать</p>
-                                <p>- Сухая чистка (химчистка)</p>
-                                <p>- Барабанная сушка запрещена</p>
+                                @Model.Description
                             </div>
                         </div>
                     </div>

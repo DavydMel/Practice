@@ -237,7 +237,14 @@
 <main class="main">
     <div class="category">
         <div class="container">
-            <div class="category__title">Категории</div>
+            <div class="category__title">
+                Категории
+                @if (ViewBag.isAdmin)
+                {
+                    <a href="/category"><small style="color: dodgerblue; font-size: 14px">Переглянути категорії</small></a>
+                    <a href="/product"><small style="color: dodgerblue; font-size: 14px">Переглянути продукти</small></a>
+                }
+            </div>
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <a href="" class="category__item swiper-slide">
