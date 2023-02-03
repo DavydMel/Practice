@@ -30,7 +30,9 @@ namespace Shop.Controllers
                 ViewBag.isAdmin = false;
             }
             ViewData["isLogged"] = claimUser.Identity.IsAuthenticated;
-            return View();
+
+            var categories = storeDbContext.Category.ToList();
+            return View(categories);
         }
 
         public async Task<IActionResult> Basket()

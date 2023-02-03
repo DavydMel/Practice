@@ -51,15 +51,29 @@ namespace Shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Category category)
+        public async Task<IActionResult> Create([Bind("Id,Name")] Category category, IFormFile file)
         {
-            if (ModelState.IsValid)
+            if (file != null && file.Length > 0)
             {
-                _context.Add(category);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                var prefix = @"wwwroot\img\category";
+                var fileName = Path.ChangeExtension(Path.GetRandomFileName(), ".jpg"); ;
+                var filePath = Path.Combine(prefix, fileName);
+
+                using (var stream = System.IO.File.Create(filePath))
+                {
+                    await file.CopyToAsync(stream);
+                }
+
+                category.ImgName = fileName;
             }
-            return View(category);
+            else
+            {
+                return View(category);
+            }
+
+            _context.Add(category);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Category/Edit/5
@@ -89,34 +103,50 @@ namespace Shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImgName")] Category category, IFormFile file)
         {
             if (id != category.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            try
             {
-                try
+                if (file != null && file.Length > 0)
                 {
-                    _context.Update(category);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CategoryExists(category.Id))
+                    var prefix = @"wwwroot\img\category";
+                    var fileName = Path.ChangeExtension(Path.GetRandomFileName(), ".jpg"); ;
+                    var filePath = Path.Combine(prefix, fileName);
+
+                    var oldImg = Path.Combine(prefix, category.ImgName);
+
+                    using (var stream = System.IO.File.Create(filePath))
                     {
-                        return NotFound();
+                        await file.CopyToAsync(stream);
+                        if (System.IO.File.Exists(oldImg))
+                        {
+                            System.IO.File.Delete(oldImg);
+                        }
                     }
-                    else
-                    {
-                        throw;
-                    }
+
+                    category.ImgName = fileName;
                 }
-                return RedirectToAction(nameof(Index));
+
+                _context.Update(category);
+                await _context.SaveChangesAsync();
             }
-            return View(category);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CategoryExists(category.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Category/Delete/5
@@ -156,15 +186,43 @@ namespace Shop.Controllers
             if (category != null)
             {
                 _context.Category.Remove(category);
+
+                var prefix = @"wwwroot\img\category";
+                var oldImg = Path.Combine(prefix, category.ImgName);
+
+
+                if (System.IO.File.Exists(oldImg))
+                {
+                    System.IO.File.Delete(oldImg);
+                }
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<IActionResult> Products(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Category category = await _context.Category.FindAsync(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+            ViewBag.Category = category.Name;
+
+            var products = _context.Product.Where(p => p.CategoryId == id);
+
+            return View(products);
+        }
+
         private bool CategoryExists(int id)
         {
-          return _context.Category.Any(e => e.Id == id);
+           return _context.Category.Any(e => e.Id == id);
         }
     }
 }

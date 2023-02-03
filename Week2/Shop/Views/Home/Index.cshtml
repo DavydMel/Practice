@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<Shop.Models.Store.Category>
+
+@{
     ViewData["Title"] = "Головна";
 }
 
@@ -247,56 +249,14 @@
             </div>
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <a href="" class="category__item swiper-slide">
-                        <img src="~/img/category1.jpg" alt="">
-                        <span class="category__label">Куртки</span>
-                    </a>
-                    <a href="" class="category__item swiper-slide">
-                        <img src="~/img/category2.jpg" alt="">
-                        <span class="category__label">Пальто</span>
-                    </a>
-                    <a href="" class="category__item swiper-slide">
-                        <img src="~/img/category3.jpg" alt="">
-                        <span class="category__label">Шубы</span>
-                    </a>
-                    <a href="" class="category__item category__item_4 swiper-slide">
-                        <img src="~/img/category4.jpg" alt="">
-                        <span class="category__label">Парки</span>
-                    </a>
-                    <a href="" class="category__item swiper-slide">
-                        <img src="~/img/category1.jpg" alt="">
-                        <span class="category__label">Куртки</span>
-                    </a>
-                    <a href="" class="category__item swiper-slide">
-                        <img src="~/img/category2.jpg" alt="">
-                        <span class="category__label">Пальто</span>
-                    </a>
-                    <a href="" class="category__item swiper-slide">
-                        <img src="~/img/category3.jpg" alt="">
-                        <span class="category__label">Шубы</span>
-                    </a>
-                    <a href="" class="category__item category__item_4 swiper-slide">
-                        <img src="~/img/category4.jpg" alt="">
-                        <span class="category__label">Парки</span>
-                    </a>
-                    <a href="" class="category__item swiper-slide">
-                        <img src="~/img/category1.jpg" alt="">
-                        <span class="category__label">Куртки</span>
-                    </a>
-                    <a href="" class="category__item swiper-slide">
-                        <img src="~/img/category2.jpg" alt="">
-                        <span class="category__label">Пальто</span>
-                    </a>
-                    <a href="" class="category__item swiper-slide">
-                        <img src="~/img/category3.jpg" alt="">
-                        <span class="category__label">Шубы</span>
-                    </a>
-                    <a href="" class="category__item category__item_4 swiper-slide">
-                        <img src="~/img/category4.jpg" alt="">
-                        <span class="category__label">Парки</span>
-                    </a>
+                    @foreach (var item in Model)
+                    {
+                        <a href="/category/products/@item.Id" class="category__item category__item_4 swiper-slide">
+                            <img src="~/img/category/@item.ImgName" alt="">
+                            <span class="category__label">@item.Name</span>
+                        </a>
+                    }
                 </div>
-                <!-- If we need navigation buttons -->
                 <div class="category__btn swiper-button-prev"></div>
                 <div class="category__btn swiper-button-next"></div>
             </div>

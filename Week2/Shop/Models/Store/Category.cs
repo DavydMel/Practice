@@ -10,6 +10,9 @@ namespace Shop.Models.Store
         [Required]
         public string Name { get; set; }
 
+        [Required]
+        public string ImgName { get; set; }
+
         public ICollection<Product>? Products { get; set; }
     }
 }

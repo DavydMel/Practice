@@ -72,7 +72,7 @@ namespace Shop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Price,Color,Sizes,Description,CategoryId")] Product product, IFormFile file)
         {
-            if (file.Length > 0)
+            if (file != null && file.Length > 0)
             {
                 var prefix = @"wwwroot\img\product";
                 var fileName = Path.ChangeExtension(Path.GetRandomFileName(), ".jpg"); ;
@@ -85,13 +85,14 @@ namespace Shop.Controllers
 
                 product.ImgName = fileName;
             }
+            else
+            {
+                return View(product);
+            }
 
             _context.Add(product);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-
-            ViewData["CategoryId"] = new SelectList(_context.Category, "Id", "Name", product.CategoryId);
-            return View(product);
         }
 
         // GET: Product/Edit/5
@@ -131,7 +132,7 @@ namespace Shop.Controllers
 
             try
             {
-                if (file.Length > 0)
+                if (file != null && file.Length > 0)
                 {
                     var prefix = @"wwwroot\img\product";
                     var fileName = Path.ChangeExtension(Path.GetRandomFileName(), ".jpg"); ;
