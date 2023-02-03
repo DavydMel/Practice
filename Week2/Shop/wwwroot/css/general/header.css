@@ -341,7 +341,7 @@ body.lock {
   padding: 10px 40px 10px 20px;
   border: 1px solid rgba(37, 37, 37, 0.3);
   border-radius: 20px;
-  background: url(../../src/icons/Search.svg) no-repeat scroll 95% 7px;
+  background: url(../../icons/Search.svg) no-repeat scroll 95% 7px;
 }
 .header .header__menu_mobile .header__list .header__search input::placeholder {
   font-weight: 300;

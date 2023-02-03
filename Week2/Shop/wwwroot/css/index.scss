@@ -6,6 +6,12 @@
 
 @include headerBGColor(#3D3D3D, white);
 
+.header__menu_mobile {
+    input, input::placeholder {
+        text-align: left;
+    }
+}
+
 //categories
 .category {
     //category title
